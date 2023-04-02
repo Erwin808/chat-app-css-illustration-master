@@ -1,0 +1,278 @@
+/* Start variables */
+:root {
+    --Pale-Violet-sub-heading-at-the-top-of-the-app-UI: hsl(276, 100%, 81%);
+    --Moderate-Violet--chat-on-the-left: hsl(276, 55%, 52%);
+    --Desaturated-Dark-Violet--chat-on-the-right: hsl(271, 15%, 43%);
+    --Grayish-Blue-placeholder-text: hsl(206, 6%, 79%);
+    --Very-Dark-Desaturated-Violet-main-heading: hsl(271, 36%, 24%);
+    --Dark-Grayish-Violet-paragraph: hsl(270, 7%, 64%);
+    --Light-Magenta: hsl(293, 100%, 63%);
+    --Light-Violet: hsl(264, 100%, 61%);
+    --White: hsl(0, 0%, 100%);
+    --Light-Grayish-Violet-app-background: hsl(270, 20%, 96%);
+    --Very-Dark-Desaturated-Violet-submit-button-background: hsl(271, 36%, 24%);
+    --Very-Light-Magenta--radio-button-outline: hsl(289, 100%, 72%);
+}
+/* End variables */
+/* Start Global rules */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Rubik', sans-serif;
+    background-color: var(--Light-Grayish-Violet-app-background);
+}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Small screen */
+@media (min-width: 767px) {
+    .container {
+        width: 750px;
+    }
+}
+/* Medium screen */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+/* large screen */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+/* End Global rules */
+/* Start Page */
+.background1 {
+    width: 325px;
+    height: 500px;
+    background-color: var(--Moderate-Violet--chat-on-the-left);
+    position: absolute;
+}
+.background2 {
+    width: 350px;
+    height: 350px;
+    background-color: var(--Moderate-Violet--chat-on-the-left);
+    border-radius: 50%;
+    position: absolute;
+    bottom: 75px;
+    left: -25px;
+}
+.background3 {
+    width: 325px;
+    height: 500px;
+    background-color: #eee;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+.background4 {
+    width: 500px;
+    height: 500px;
+    background-color: #eee;
+    border-radius: 50%;
+    position: absolute;
+    top: 40px;
+    right: -173px;
+}
+.box {
+    width: 850px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+@media (max-width: 467px) {
+    .box {
+        width: auto;
+        margin: 100px 0px;
+        flex-direction: column;
+    }
+    .background3 {
+        display: none;
+    }
+    .background4 {
+        display: none;
+    }
+}
+.mobile {
+    width: 290px;
+    height: 570px;
+    padding: 10px;
+    background-color: var(--White);
+    border-radius: 30px;
+}
+.mobile::before {
+    content: "";
+    width: 150px;
+    height: 35px;
+    background-color: var(--White);
+    position: absolute;
+    top: 0px;
+    left: 73px;
+    border-radius: 20px;
+    z-index: 1;
+}
+.app {
+    width: 270px;
+    height: 550px;
+    background-color: var(--Light-Grayish-Violet-app-background);
+    border-radius: 25px;
+    overflow: hidden;
+    position: relative;
+}
+.app-head {
+    width: 270px;
+    height: 75px;
+    background-image: linear-gradient(to right, var(--Light-Violet), var(--Light-Magenta));
+    display: flex;
+    flex-direction: row;
+    padding-top: 30px;
+    align-items: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: var(--White);
+    border-radius: 10px;
+}
+.app-head img {
+    width: 30px;
+    border: 1.5px solid var(--White);
+    border-radius: 50%;
+    margin: 8px 10px 0;
+}
+.app-head .text p:first-child {
+    font-weight: 700;
+}
+.app-head .text p:last-child {
+    font-weight: 400;
+    font-size: 12px;
+    opacity: 0.5;
+    margin-right: 84px;
+}
+.message-area {
+    padding: 10px;
+}
+.message-left {
+    width: 140px;
+    background-color: hsl(276deg 55% 52% / 8%);
+    color: var(--Moderate-Violet--chat-on-the-left);
+    font-size: 9px;
+    padding: 5px;
+    line-height: 1.6;
+    border-radius: 15px;
+    border-bottom-left-radius: 5px;
+    margin-bottom: 10px;
+}
+.images {
+    display: flex;
+    justify-content: end;
+    margin: 20px 0 10px;
+}
+.images img {
+    width: 50px;
+    border-radius: 15px;
+    margin-left: 10px;
+}
+.message-right {
+    width: 140px;
+    background-color: var(--White);
+    color: var(--Desaturated-Dark-Violet--chat-on-the-right);
+    font-size: 9px;
+    padding: 5px;
+    line-height: 1.6;
+    border-radius: 15px;
+    border-bottom-right-radius: 5px;
+    margin-bottom: 10px;
+    position: relative;
+    left: 110px;
+}
+.message-price {
+    width: 170px;
+    height: 40px;
+    color: var(--White);
+    background-image: linear-gradient(to left, var(--Light-Violet), var(--Light-Magenta));
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    border-bottom-left-radius: 5px;
+}
+.message-price i {
+    opacity: 0.7;
+    margin: 0 15px 0px 10px;
+}
+.message-price p:first-of-type {
+    font-size: 10px;
+}
+.message-price p:last-of-type {
+    font-weight: 700;
+    margin-left: 20px;
+}
+.send {
+    width: 250px;
+    height: 40px;
+    border-radius: 20px;
+    margin: -10px 10px;
+    border: none;
+    outline: none;
+    padding: 20px;
+}
+.send::placeholder {
+    opacity: 0.2;
+    font-size: 12px;
+    font-weight: bold;
+}
+.arrow {
+    height: 30px;
+    position: relative;
+    bottom: 25px;
+    left: 225px;
+    background-color: var(--Very-Dark-Desaturated-Violet-main-heading);
+    border-radius: 50%;
+    width: 30px;
+}
+.arrow i {
+    color: white;
+    padding: 7px 10px;
+}
+.box2 h2 {
+    font-size: 40px;
+    margin-bottom: 25px;
+}
+.box2 p {
+    width: 450px;
+    color: var(--Dark-Grayish-Violet-paragraph);
+    line-height: 1.6;
+    font-weight: 400;
+    white-space: 2px;
+}
+@media (max-width: 467px) {
+    .box2 {
+        margin-bottom: 50px;
+    }
+    .box2 h2 {
+        text-align: center;
+        font-size: 35px;
+    }
+    .box2 p {
+        width: 300px;
+        text-align: center;
+    }
+}
+/* End Page */
